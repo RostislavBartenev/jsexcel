@@ -13,11 +13,6 @@ class DOM {
     return this.$el.outerHTML.trim()
   }
 
-  clear() {
-    this.html('')
-    return this
-  }
-
   append(node) {
     if (node instanceof DOM) {
       node = node.$el
@@ -77,6 +72,11 @@ class DOM {
       }
     }
     return this.data.id
+  }
+
+  clear() {
+    this.html('')
+    return this
   }
 
   text(text) {
